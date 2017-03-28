@@ -5,12 +5,17 @@
 	--brand: rgba(0,180,255, 0.9);
 	--primary: #f8f8ff;
 	--primary__hover: maroon;
+	--panel-radius: 8px;
 
 }
 
 html, body {
 	margin: 0; padding: 0;
 	background: var(--primary);
+}
+
+section {
+	margin-top: 3em; margin-bottom: 3em;
 }
 
 #site-wrapper {
@@ -134,6 +139,60 @@ header {
 	border-radius: 3px;
 }
 
+.panel-custom {
+	min-height: 200px;
+	border: 1px solid #fff;
+	border-radius: var(--panel-radius);
+	box-shadow: 0px 0px 1px grey;
+}
+.panel-custom > .head {
+	border-top-left-radius: var(--panel-radius);
+	border-top-right-radius: var(--panel-radius);
+	min-height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.panel-custom > .head > span {
+	font-size: 6em;
+	color: #fff;
+}
+.panel-custom > .head.blue {
+	background: #56CCF2; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+	background: -webkit-linear-gradient(right, #56CCF2, #2F80ED);
+	background: -o-linear-gradient(right, #56CCF2, #2F80ED);
+	background: linear-gradient(to left, #56CCF2, #2F80ED); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.panel-custom > .head.green {
+	background: #4AC29A; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #4AC29A , #BDFFF3); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #4AC29A , #BDFFF3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.panel-custom > .head.red {
+	background: #ee0979; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+	background: -webkit-linear-gradient(right, #ee0979, #ff6a00);
+	background: -o-linear-gradient(right, #ee0979, #ff6a00);
+	background: linear-gradient(to left, #ee0979, #ff6a00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.panel-custom > .body {
+	padding: 1em 1em 0 1em;
+}
+
+.panel-custom a > .footer {
+	margin: 1em 1em 0 1em;
+	padding-top: 1em; padding-bottom: 1em;
+	text-align: center;
+	border-top: 1px solid #efefee;
+}
+.panel-custom a > .footer:hover {
+	background: #efefee;
+	margin: 1em 0 0 0;
+	border-bottom-left-radius: var(--panel-radius);
+	border-bottom-right-radius: var(--panel-radius);
+}
+
+
 @media(max-width:767px){
 	.header__navbar--brand {
 		position: relative;
@@ -153,6 +212,8 @@ header {
 		background: #fff;
 	}
 }
+
+
 @media (min-width: 768px) {
 	.container {
 		width: 750px;
