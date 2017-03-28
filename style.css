@@ -1,0 +1,170 @@
+@import 'grid.css';
+@import 'typography.css';
+
+:root {
+	--brand: rgba(0,180,255, 0.9);
+	--primary: #f8f8ff;
+	--primary__hover: maroon;
+
+}
+
+html, body {
+	margin: 0; padding: 0;
+	background: var(--primary);
+}
+
+#site-wrapper {
+position: relative;
+overflow: hidden;
+width: 100%;
+}
+
+#site-canvas {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
+#site-menu {
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -300px;
+  background: #f8f8ff;
+	padding: 15px;
+}
+
+#site-wrapper.show-nav #site-canvas {
+  -webkit-transform: translateX(300px);
+  transform: translateX(300px);
+}
+
+.container {
+	position: relative;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.pull-right {
+	position: absolute;
+	right: 15px;
+}
+
+
+
+header {
+	background: var(--brand);
+	background: 
+				linear-gradient(0deg, rgba(0,180,255, 0.9), rgba(0,180,255,0.9)),
+				url('images/background.jpg');		
+	background-size: cover;
+	height: 90vh;
+	color: #fff;
+	text-shadow: 1px 1px rgba(0,0,0,0.1);
+}
+
+.header__content {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.header__content--text {
+	height: 60vh;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	max-width: 760px
+}
+
+
+.header__content--signup {
+	margin-bottom: 10em;
+	width: 80vw;
+	background: rgba(255,255,255,0.8);
+	border: 4px solid #fff;
+	border-radius: 4px;
+	height: 55px;
+}
+
+.header__navbar {
+	border: 1px solid transparent;
+	height: 55px;
+	width: 100%;
+}
+.header__navbar > * {
+	margin-top: 19px;
+	margin-bottom: 19px;
+}
+.header__navbar--brand {
+	position: absolute;
+	left: 15px;
+}
+.header__navbar--brand > img {
+	height: 40px;
+}
+.header__navbar--menu{
+	margin: 0; padding: 0;
+}
+.header__navbar--menu li{
+	display: inline;
+	margin-left: 2em
+}
+.header__navbar--menu li > a {
+	text-decoration: none;
+	color: #fff;
+}
+.header__navbar--menu li > a:hover {
+	color: #fefeff;
+	text-shadow: none;
+	padding-bottom: 5px;
+	border-bottom: 2px solid #fff;
+}
+
+.btn-rounded {
+	border: 1px solid var(--primary);
+	padding: 6px 15px;
+	border-radius: 3px;
+}
+
+@media(max-width:767px){
+	.header__navbar--brand {
+		position: relative;
+	    width: 95px;
+	    margin: 0 auto;
+	    left: 0;
+	}
+	.header__navbar .menu-click {
+		display: inline-block;
+    	float: left;
+    	margin-top: 5px;
+	}
+	.header__navbar .menu-click .bar {
+		width: 30px;
+		height: 2px;
+		margin: 5px;
+		background: #fff;
+	}
+}
+@media (min-width: 768px) {
+	.container {
+		width: 750px;
+	}
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
