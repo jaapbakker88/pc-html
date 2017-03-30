@@ -344,6 +344,13 @@ footer p.menu-head {
 	font-weight: 700;
 }
 
+footer hr{
+	height: 0px;
+	border-top: 1px solid #ddd;
+	border-style: solid;
+
+}
+
 
 @media(max-width:767px){
 	.header__navbar--brand {
