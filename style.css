@@ -305,19 +305,43 @@ header {
 }
 
 footer {
+	background: #F3F3F3;
 	margin-top: 3em;
-	padding-bottom: 1em;
+	padding-bottom: 1em; padding-top: 3em;
+	border-top: 1px solid #ddd;
 	min-height: 100px;
 }
-footer hr:first-child {
-	margin-bottom: 3em;
-}
+
 footer .menu {
-	padding-bottom: 3em;
+
 }
 footer img {
 	height: 40px;
+	position: absolute;
+    right: 13px;
+    top: -5px;
+}
 
+footer ul {
+	list-style: none;
+	padding-left: 0;
+	border-right: 1px solid #ddd;
+}
+
+footer .fa-ul {
+	margin-left: 1.5em;
+}
+footer ul li .fa-li {
+	top:0.9em;
+}
+footer ul li {
+	padding-top: 0.7em;
+}
+
+footer p.menu-head {
+	font-size: 0.8em;
+	text-transform: uppercase;
+	font-weight: 700;
 }
 
 
