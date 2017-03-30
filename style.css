@@ -258,7 +258,7 @@ header {
 }
 
 .form-group-custom {
-	font-size: 1.5em;
+	font-size: 1em;
 	display: flex;
 	background: rgba(255,255,255,0.9);
 	/*border: 1px solid #fff;*/
@@ -275,7 +275,7 @@ header {
 	color: #666;
 }
 .form-group-custom input:focus {
-		border-color: var(--brand);
+		/*border-color: var(--brand);*/
 		background: #fff;
 		color: #333;
 	}
@@ -285,19 +285,9 @@ header {
 
 .form-group-custom button {
 	height: 50px;
-	color: #333;
-	background: #56CCF2; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
-	background: -webkit-linear-gradient(top, rgba(86,204,242,0.9), rgba(47,128,237,0.9));
-	background: -o-linear-gradient(top, rgba(86,204,242,0.9), rgba(47,128,237,0.9));
-	background: linear-gradient(to top, rgba(86,204,242,0.9), rgba(47,128,237,0.9)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	border-top-right-radius: 4px;
-	border-bottom-right-radius: 4px;
-	border: 1px solid transparent;
-	padding-left: 2em; padding-right: 2em;
-	-webkit-box-shadow: inset -1px 0px 2px 0px rgba(0,0,0,0.15);
-	-moz-box-shadow: inset -1px 0px 2px 0px rgba(0,0,0,0.15);
-	box-shadow: inset -1px 0px 2px 0px rgba(0,0,0,0.15);
-	color: #fff;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+
 }
 
 .intro-block:after {
