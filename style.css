@@ -3,6 +3,7 @@
 
 :root {
 	--brand: rgba(0,180,255, 0.9);
+	--brand-d: rgba(0,180,255, 1);
 	--primary: #f8f8ff;
 	--primary__hover: maroon;
 	--panel-radius: 8px;
@@ -38,6 +39,11 @@ html, body {
 
 section {
 	margin-top: 3em; margin-bottom: 3em;
+}
+
+.dark {
+	background: #292929;
+	color: rgba(255,255,255,0.89);
 }
 
 #site-wrapper {
@@ -163,6 +169,9 @@ header {
 	padding: 6px 15px;
 	border-radius: 3px;
 }
+.btn {border-radius: 4px;}
+.btn-primary {background: var(--brand); border: 1px solid var(--brand-d);}
+.btn-primary:hover {background: var(--brand-d); border: 1px solid var(--brand-d);}
 
 .panel-custom {
 	margin: 1em;
@@ -291,6 +300,19 @@ header {
 	color: #fff;
 }
 
+.intro-block:after {
+	display: none;
+	content: url('images/voorwie.png');
+	position: absolute;
+	right: 0;
+	top: 100px;
+/*	transform: translateX(400px);
+*/}
+
+/* SECTION REKENMODULE */
+#rekenmodule {
+	padding: 3em;
+}
 
 footer {
 	margin-top: 3em;
@@ -337,16 +359,29 @@ footer img {
 	}
 }
 
+.plane {max-height: 200px !important; display: none;}
+.calculator {
+	display:none;
+	float: right;
+}
+.calculator:after {
+	clear:both;
+}
 
 @media (min-width: 768px) {
 	.container {
 		width: 750px;
 	}
+	.plane {display: block; max-height: 400px !important;}
+	.calculator{display: block;}
 }
 @media (min-width: 992px) {
   .container {
     width: 970px;
   }
+  .intro-block:after {
+		display: block;
+	}
 }
 @media (min-width: 1200px) {
   .container {
